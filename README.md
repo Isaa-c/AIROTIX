@@ -17,6 +17,7 @@ Developer API support for third-party applications
 
 Data logging and export for analysis and reporting
 
+
 Hardware Components
 Arduino UNO R4 WiFi (core microcontroller)
 
@@ -36,8 +37,10 @@ Terminal blocks and zero PCB for modular wiring
 
 Custom enclosure with airflow channels and tripod mount
 
+
 Functional Overview
 The device reads environmental and power parameters through its sensors and periodically updates their values to the Arduino IoT Cloud. Threshold values for each pollutant can be set by authorized agencies. When a pollutant level crosses either a warning or abnormal threshold, corresponding Boolean variables are updated and used to trigger alerts. Individuals accessing the read-only dashboard are able to view current readings, graphical trends, and notifications.
+
 
 Cloud Variables and Structure
 Airotix uses a structured cloud variable system, including:
@@ -50,8 +53,9 @@ Status booleans (bool): e.g., pm2_5AbnormalReached, no2WarningReached
 
 Thresholds are only configurable from the agency dashboard, ensuring individuals cannot tamper with alert criteria.
 
+
 API Access
-The Airotix system includes a RESTful API for developer integration. Authorized applications can access live and historical sensor data, including threshold states and power metrics. JSON-format responses are available for real-time mobile or web dashboard integration. Authentication is token-based. Documentation is available on request.
+The Airotix system includes a RESTful API for developer integration. Authorized applications can access live and historical sensor data, including threshold states. JSON-format responses are available for real-time integration with mobile or web dashboards. Authentication is token-based.
 
 Dashboard Design
 The system uses two dedicated dashboards:
@@ -84,8 +88,7 @@ Mount the system in an urban area with unobstructed airflow and solar exposure.
 
 Connect the system to Wi-Fi using the credentials in thingProperties.h.
 
-Licensing
-This project is released under the MIT License. Contributions are welcome.
+
 
 Acknowledgements
 This project was developed with the goal of supporting public health awareness and environmental transparency. It is designed for scalability, educational use, and institutional deployment.
